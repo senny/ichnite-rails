@@ -6,7 +6,7 @@ module Ichnite
           exception_name = e.class.name
           status = ::ActionDispatch::ExceptionWrapper.status_code_for_exception(exception_name)
           if status == 500
-            ::Ichnite.log('request_errorz',
+            ::Ichnite.log('request_error',
               at: :error,
               error: exception_name,
               message: e.message[/\A.+$/].inspect
