@@ -14,7 +14,7 @@ module Ichnite
           end
         rescue Exception => e2
           # never interfere with the regular exception handling
-          Rails.logger.error(e2.inspect)
+          ::Rails.logger.error(e2.inspect)
         end
 
         super
